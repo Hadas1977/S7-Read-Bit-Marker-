@@ -121,7 +121,7 @@ namespace S7Net
            byte[] b;
            byte state=0;
             bool bitSFCSKapp = false;
-           // bool bitSFCSKapp = false;
+         
 
             b = plc.ReadBytes(DataType.Marker, 0, 0, 2);
             state = b[0];
@@ -129,7 +129,7 @@ namespace S7Net
             
             bitSFCSKapp = (state & (1 << 3)) != 0;
 
-            // bool bitSFCSKapp = (state & (1 << 3)) != 0;
+         
             if (bitSFCSKapp == true)
             {
                 button3.BackColor = Color.Green;
